@@ -23,11 +23,11 @@ def auto_click(interval, clicks):
             else:
                 print("Mouse is stationary. Clicking...")
                 if stationary_x is not None and stationary_y is not None:
-                    offset_x = random.randint(-20, 20)  # генерация случайного смещения по x
-                    offset_y = random.randint(-20, 20)  # генерация случайного смещения по y
-                    pyautogui.click(x=stationary_x + offset_x, y=stationary_y + offset_y, button='left')  # клик с учетом смещения
+                    offset_x = random.randint(-20, 20)
+                    offset_y = random.randint(-20, 20)
+                    pyautogui.click(x=stationary_x + offset_x, y=stationary_y + offset_y, button='left')
                 else:
-                    pyautogui.click(button='left')  # клик без смещения, если остановка не была зафиксирована
+                    pyautogui.click(button='left')
             last_x, last_y = current_x, current_y
     except KeyboardInterrupt:
         print("\nAuto Clicker stopped.")
